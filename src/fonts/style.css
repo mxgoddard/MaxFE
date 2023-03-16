@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'ObjektivMk3Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ObjektivMk3Bold'), url('./ObjektivMk3Bold.otf') format('opentype');
+}

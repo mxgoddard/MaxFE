@@ -1,0 +1,25 @@
+@import '../../fonts/style.css';
+
+.LoginWrapper {
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    background-attachment: fixed;
+    height: calc(100vh - 200px);
+    padding: 100px 25vw;
+    font-family: 'ObjektivMk3Bold';
+}
+
+.LoginContainer {
+    background-color: white;
+    border-radius: 25px;
+    margin-top: 100px;
+    padding: 60px;
+}
+
+.LoginContainer p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.LoginContainer input {
+    color: red;
+}

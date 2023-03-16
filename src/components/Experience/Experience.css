@@ -1,0 +1,9 @@
+.ExperienceCompanyLogoContainer {
+    width: 35px;
+}
+
+.ExperienceCompanyLogoContainer .ExperienceCompanyLogo {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}

@@ -1,0 +1,17 @@
+@import '../../fonts/style.css';
+
+.ContentWrapper {
+    border-color: red;
+    border-width: 1px;
+    border-style: solid;
+    margin: 140px 180px;
+}
+
+.HeroSection {
+
+}
+
+.Introduction {
+    font-size: 34px;
+    font-family: 'Montserrat';
+}
