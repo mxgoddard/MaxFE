@@ -1,6 +1,7 @@
 import { Button, Grid, Link, TextField, Typography } from '@mui/material';
 import React from 'react';
 import './Login.css';
+import { LoginA, ListUsers } from '../../helpers/NetworkHelper';
 
 export default class Login extends React.Component {
     state = {
@@ -64,7 +65,8 @@ export default class Login extends React.Component {
     }
 
     componentDidMount() {
-
+        this.setState({ username: 'test1', password: 'test1' })
+        this.ListUsersRequest();
     }
 
     handleUsernameChange(event) {
@@ -76,7 +78,23 @@ export default class Login extends React.Component {
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
         event.preventDefault();
+
+        const { username, password } = this.state;
+
+        this.LoginRequest(username, password).then((user) => {
+            console.log(user);
+            return user;
+        });
+    }
+
+    async ListUsersRequest() {
+        await ListUsers();
+    }
+
+    async LoginRequest(username, password) {
+        return await LoginA(username, password).then((user) => {
+            return user;
+        });
     }
 }
