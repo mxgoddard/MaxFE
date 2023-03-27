@@ -9,3 +9,7 @@ export const GetIdFromUrl = (path) => {
     console.log('Last element of path is not an integer.');
     return null;
 }
+
+export const IsEmptyObject = (obj) => {
+    return obj && Object.keys(obj).length === 0 && Object.getPrototypeOf(obj) === Object.prototype;
+}

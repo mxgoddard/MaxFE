@@ -1,10 +1,14 @@
 import { Button, Grid, Link, TextField, Typography } from '@mui/material';
 import React from 'react';
 import './Login.css';
-import { LoginA, ListUsers } from '../../helpers/NetworkHelper';
+import { LoginA } from '../../helpers/NetworkHelper';
+import { UserContext } from '../../UserContext';
+import { IsEmptyObject } from '../../helpers/Helper';
 
 export default class Login extends React.Component {
     state = {
+        loggedIn: false,
+        currentUser: null,
         username: '',
         password: ''
     }
@@ -14,6 +18,8 @@ export default class Login extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
+
+        const { loggedIn, currentUser } = this.state;
 
         return (
             <div className='LoginWrapper'>
@@ -43,9 +49,20 @@ export default class Login extends React.Component {
                                     onChange={this.handlePasswordChange}
                                 />
                             </Grid>
-                            <Button variant="contained" color="primary" type="submit">
-                                <Typography>Login</Typography>
-                            </Button>
+                            <UserContext.Consumer>
+                                {({ user, loginUser, logoutUser }) => {
+                                    if (loggedIn && IsEmptyObject(user)) {
+                                        loginUser(currentUser);
+                                    } else {
+                                        return (
+                                            <Button variant="contained" color="primary" type="submit">
+                                                <Typography>Login</Typography>
+                                            </Button>
+                                        )
+                                    }
+                                }}
+                            </UserContext.Consumer>
+
                             <Grid item>
                                 <Link to={'forgot-account'}>
                                     <Button><Typography>Forgot Username / Password?</Typography></Button>
@@ -65,8 +82,7 @@ export default class Login extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({ username: 'test1', password: 'test1' })
-        this.ListUsersRequest();
+        this.setState({ username: 'Test1', password: 'Test1' })
     }
 
     handleUsernameChange(event) {
@@ -82,14 +98,12 @@ export default class Login extends React.Component {
 
         const { username, password } = this.state;
 
-        this.LoginRequest(username, password).then((user) => {
-            console.log(user);
-            return user;
+        this.LoginRequest(username, password).then((resultUser) => {
+            if (resultUser.user.id.length > 0) {
+                this.setState({ loggedIn: true, currentUser: resultUser });
+            }
+            return resultUser;
         });
-    }
-
-    async ListUsersRequest() {
-        await ListUsers();
     }
 
     async LoginRequest(username, password) {

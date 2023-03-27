@@ -18,20 +18,6 @@ export const GeneralTestApiCall = () =>
     })
     .then(res => res.json())
     .then((result) => {
-        console.log(result);
-        return result;
-    })
-    .catch((ex) => console.log(ex));
-}
-
-export const ListUsers = () => 
-{
-    fetch(DetermineUrl('user/list-users'), {
-        method: "GET"
-    })
-    .then(res => res.json())
-    .then((result) => {
-        console.log(result);
         return result;
     })
     .catch((ex) => console.log(ex));
