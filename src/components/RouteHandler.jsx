@@ -5,6 +5,7 @@ import Blog from './Blog/Blog';
 import Contact from './Contact/Contact';
 import Home from './Home/Home';
 import Login from './Login/Login';
+import Profile from './Profile/Profile';
 import Project from './Project';
 import Projects from './Projects/Projects';
 import Resume from './Resume';
@@ -26,6 +27,7 @@ export default class RouteHandler extends React.Component {
                     <Route path='/resume' element={<Resume />} />
                     <Route path='projects/steam-library' element={<SteamLibrary />} />
                     <Route path='projects/valorant-stats' element={<ValorantStats />} />
+                    <Route path='/profile' element={<Profile />} />
                 </Routes>
             </>
         )

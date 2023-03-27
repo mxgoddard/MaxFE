@@ -39,7 +39,7 @@ export const LoginA = (username, password) =>
 }
 
 
-function DetermineUrl(relativePath) {
+export const DetermineUrl = (relativePath) => {
     let baseUrl = HOSTED ? HOSTED_BASE_URL : LOCAL_BASE_URL;
     return `${baseUrl}/${relativePath}`;
 }
