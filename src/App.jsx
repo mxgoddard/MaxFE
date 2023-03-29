@@ -44,6 +44,7 @@ import Profile from "./components/Profile/Profile";
 
 import { LogoutAction } from "./actions/AuthActions";
 import { ClearMessageAction } from "./actions/MessageActions";
+import NavBar from "./components/NavBar/NavBar";
 
 const App = () => {
 	// let a = useSelector((state) => state.auth);
@@ -65,8 +66,18 @@ const App = () => {
 
 	// TODO - Move to NavBar component
 	return (
-		<div>
-			<nav className="navbar navbar-expand navbar-dark bg-dark">
+		<div className="AppContainer">
+			<NavBar />
+
+			<div>
+				<Routes>
+					<Route exact path='/' element={<Home />} />
+					<Route path='/login' element={<Login />} />
+					<Route path='/profile' element={<Profile />} />
+					<Route path='/register' element={<Register />} />
+				</Routes>
+			</div>
+			{/* <nav className="navbar navbar-expand navbar-dark bg-dark">
 				<Link to={"/"} className="navbar-brand">
 					Test123
 				</Link>
@@ -114,17 +125,10 @@ const App = () => {
 						</li>
 					</div>
 				)}
-			</nav>
+			</nav> */}
 
 			{/* <RouteHandler /> */}
-			<div>
-				<Routes>
-					<Route exact path='/' element={<Home />} />
-					<Route path='/login' element={<Login />} />
-					<Route path='/profile' element={<Profile />} />
-					<Route path='/register' element={<Register />} />
-				</Routes>
-			</div>
+
 
 		</div>
 	);

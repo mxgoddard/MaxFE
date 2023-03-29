@@ -1,34 +1,40 @@
-import { Typography } from '@mui/material';
+import { Container, Typography, Button } from '@mui/material';
 import React from 'react';
-import Experience from '../Experience/Experience';
-import Typewriter from '../Typewriter/Typewriter';
-import { GeneralTestApiCall } from '../../helpers/NetworkHelper';
 import './Home.css';
 
-export default class Home extends React.Component {
-    render() {
-        return (
-            <div>
+function Home(props) {
 
-                <div className='ContentWrapper'>
-                    <div className='HeroSection'>
-                        <div className='Introduction'>
-                            <Typewriter text={"// Hi, I'm Max and I [d]build stuf[r] write code."} />
-                        </div>
 
-                    </div>
+    return (
+        <div className='Home'>
+            <video width="750" height="500" autoPlay muted loop>
+                <source src={require('../../videos/HeroVideo.mp4')} type="video/mp4" />
+                Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <div className='Home-Container'>
+                <Typography variant="h6"
+                    component="div"
+                    id='Home-Whoami'
+                    sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>// Who Am I</Typography>
 
-                    <Experience />
-                </div>
+                <Typography variant="h6"
+                    component="div"
+                    id='Home-Job-Title'
+                    sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', maxWidth: '50vw', lineHeight: '1', marginTop: '2rem' } }}>Full-Stack Software Developer</Typography>
+
+                <Typography variant="h6"
+                    component="div"
+                    id='Home-About-Description'
+                    sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', maxWidth: '50vw', marginTop: '2rem' } }}>
+                    As a software developer with 5 years of experience, I am passionate about using my skills to create innovative solutions that solve complex problems.
+                </Typography>
+
+                <Button key={'Hero-Get-In-Touch'} id='Nav-Bar-Link-Login' sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem', marginTop: '2rem' }}>
+                    {'Get in touch →'}
+                </Button>
             </div>
-        )
-    }
+        </div>
+    );
+};
 
-    componentDidMount() {
-        this.abc();
-    }
-
-    async abc() {
-        await GeneralTestApiCall();
-    }
-}
+export default Home;

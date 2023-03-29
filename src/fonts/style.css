@@ -1,6 +1,27 @@
 @font-face {
-    font-family: 'ObjektivMk3Bold';
+    font-family: 'PPPangramSans-Regular';
     font-style: normal;
-    font-weight: normal;
-    src: local('ObjektivMk3Bold'), url('./ObjektivMk3Bold.otf') format('opentype');
+    font-weight: 400;
+    src: local('PPPangramSans-Regular'), url('./PPPangramSans-Regular.woff2') format('woff');
+}
+
+@font-face {
+    font-family: 'PPPangramSans-Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('PPPangramSans-Medium'), url('./PPPangramSans-Medium.woff2') format('woff');
+}
+
+@font-face {
+    font-family: 'PPPangramSans-Semibold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('PPPangramSans-Semibold'), url('./PPPangramSans-Semibold.woff2') format('woff');
+}
+
+@font-face {
+    font-family: 'PPPangramSans-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PPPangramSans-Bold'), url('./PPPangramSans-Bold.woff2') format('woff');
 }

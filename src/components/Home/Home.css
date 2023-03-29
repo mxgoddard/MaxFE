@@ -1,17 +1,38 @@
 @import '../../fonts/style.css';
 
-.ContentWrapper {
-    border-color: red;
-    border-width: 1px;
-    border-style: solid;
-    margin: 140px 180px;
+.Home video {
+    position: fixed;
+    width: 160vw;
+    height: 160vh;
+    right: -56vw;
+    top: -40vh;
 }
 
-.HeroSection {
-
+.Home-Container {
+    position: fixed;
+    bottom: 0;
+    padding-left: calc(2rem + 24px + 16px);
+    padding-bottom: 3rem;
 }
 
-.Introduction {
-    font-size: 34px;
-    font-family: 'Montserrat';
+#Home-Whoami {
+    font-family: 'PPPangramSans-Medium';
+    color: #6148F3;
+    font-size: 16px;
+}
+
+#Home-Job-Title {
+    font-family: 'PPPangramSans-Semibold';
+    color: #D5D0CA;
+    font-size: 80px;
+}
+
+#Home-About-Description {
+    font-family: 'PPPangramSans-Regular';
+    color: #D5D0CA;
+    font-size: 16px;
+}
+
+#Home-Link-Get-In-Touch {
+    padding-top: 100px;
 }

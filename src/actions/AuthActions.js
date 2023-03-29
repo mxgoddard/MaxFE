@@ -10,7 +10,7 @@ export const RegisterAction = (username, password, firstName) => (dispatch) => {
 
             dispatch({
                 type: SET_MESSAGE,
-                payload: 'I need to set a message on the response object'
+                payload: response.message
             });
 
             return Promise.resolve();
