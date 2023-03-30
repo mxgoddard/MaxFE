@@ -31,14 +31,14 @@ const Login = (props) => {
     // const { isLoggedIn } = useSelector(state => state.auth);
     let isLoggedIn;
     let authSelector = useSelector(state => state.auth);
-    if (authSelector != undefined) {
+    if (authSelector !== undefined) {
         isLoggedIn = authSelector.isLoggedIn;
     }
 
     // const { message } = useSelector(state => state.message);
     let message;
     let messageSelector = useSelector(state => state.message);
-    if (messageSelector != undefined) {
+    if (messageSelector !== undefined) {
         message = messageSelector.message;
     }
 

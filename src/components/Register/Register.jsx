@@ -59,7 +59,7 @@ const Register = () => {
     // const { message } = useSelector(state => state.message);
     let message;
     let messageSelector = useSelector(state => state.message);
-    if (messageSelector != undefined) {
+    if (messageSelector !== undefined) {
         message = messageSelector.message;
     }
 
