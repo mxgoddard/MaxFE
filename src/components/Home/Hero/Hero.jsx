@@ -6,7 +6,7 @@ export default class Hero extends React.Component {
         return (
             <div className='Hero'>
                 <video width="750" height="500" autoPlay muted loop>
-                    <source src={require('../../../videos/HeroVideo.mp4')} type="video/mp4" />
+                    <source src={require('../../../media/HeroVideo.mp4')} type="video/mp4" />
                     Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
                 <div className='Home-Container'>

@@ -4,7 +4,6 @@
     height: 100vh;
     width: 100vw;
     background-color: #141414;
-    color: white;
     padding-left: calc(2rem + 24px + 16px); /* gonna need to do a css passover */
     padding-right: calc(2rem + 24px + 16px);
     border-top: 1px solid #D5D0CA;

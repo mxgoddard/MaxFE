@@ -15,7 +15,7 @@ import {
     Box,
     AppBar }
      from '@mui/material';
-import { ReactComponent as Logo } from '../../images/MaxLogo.svg';
+import { ReactComponent as Logo } from '../../media/MaxLogo.svg';
 import './NavBar.css';
 
 const drawerWidth = 240;

@@ -1,0 +1,36 @@
+:root {
+    --skills-img-margin: 4vw;
+}
+
+.Skills-Wrapper {
+    padding: 10vh 0;
+    width: 100vw;
+    background-color: #141414;
+    border-top: 1px solid #D5D0CA;
+    text-align: center;
+}
+
+.Skills-Image-Wrapper {
+    margin-top: 3rem;
+    display: flex;
+}
+
+.Skills-Carousel {
+    width: 100vw;
+}
+
+.Skills-Image-Wrapper img {
+    max-width: 100%;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.Skills-Image-Wrapper img:first-of-type {
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 80%);
+    margin: 0 var(--skills-img-margin) 0 0;
+}
+
+.Skills-Image-Wrapper img:last-of-type {
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 80%);
+    margin: 0 0 0 var(--skills-img-margin);
+}

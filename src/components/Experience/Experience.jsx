@@ -23,20 +23,20 @@ export default class Experience extends React.Component {
                 </div>
                 <div className='Experience-Half'>
                     <div className='Experience-Box'>
-                        <Typography id='Experience-Box-Figure' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>5+</Typography>
-                        <Typography id='Experience-Box-Figure-Desc' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>Years of experience</Typography>
+                        <Typography id='Experience-Box-Figure'>5+</Typography>
+                        <Typography id='Experience-Box-Figure-Desc'>Years of experience</Typography>
                     </div>
                     <div className='Experience-Box'>
-                        <Typography id='Experience-Box-Figure' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>20+</Typography>
-                        <Typography id='Experience-Box-Figure-Desc' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>Projects worked on</Typography>
+                        <Typography id='Experience-Box-Figure'>20+</Typography>
+                        <Typography id='Experience-Box-Figure-Desc'>Projects worked on</Typography>
                     </div>
                     <div className='Experience-Box'>
-                        <Typography id='Experience-Box-Figure' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>-10</Typography>
-                        <Typography id='Experience-Box-Figure-Desc' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>Hand holding partners</Typography>
+                        <Typography id='Experience-Box-Figure'>-10</Typography>
+                        <Typography id='Experience-Box-Figure-Desc'>Hand holding partners</Typography>
                     </div>
                     <div className='Experience-Box'>
-                        <Typography id='Experience-Box-Figure' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>2,000+</Typography>
-                        <Typography id='Experience-Box-Figure-Desc' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>Hours in DDLC</Typography>
+                        <Typography id='Experience-Box-Figure'>2,000+</Typography>
+                        <Typography id='Experience-Box-Figure-Desc'>Hours in DDLC</Typography>
                     </div>
                 </div>
 
