@@ -1,0 +1,44 @@
+.Offer-Wrapper {
+    padding-top: 10vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: #141414;
+    padding-left: calc(2rem + 24px + 16px); /* gonna need to do a css passover */
+    padding-right: calc(2rem + 24px + 16px);
+    border-top: 1px solid #D5D0CA;
+}
+
+.Offer-Box-Wrapper {
+    margin-top: 5rem;
+}
+
+.Offer-Box-Wrapper .Offer-Box:first-of-type {
+    margin-right: 2%;
+}
+
+.Offer-Box-Wrapper .Offer-Box:last-of-type {
+    margin-left: 2%;
+}
+
+
+.Offer-Box {
+    display: inline-block;
+    border: 1px solid #74726F;
+    width: 32%;
+    padding: 2%;
+}
+
+/* Remove duplicated styles */
+#Offer-Box-Figure {
+    font-size: 30px;
+    font-family: 'PPPangramSans-Semibold';
+    color: #D5D0CA;
+    margin-top: 40%;
+}
+
+#Offer-Box-Figure-Desc {
+    font-size: 16px;
+    font-family: 'PPPangramSans-Regular';
+    color: #D5D0CA;
+    
+}

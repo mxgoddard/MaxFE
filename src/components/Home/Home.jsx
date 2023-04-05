@@ -4,6 +4,7 @@ import Experience from '../Experience/Experience';
 import Hero from './Hero/Hero';
 import './Home.css';
 import Skills from './Skills/Skills';
+import Offer from './Offer/Offer';
 
 function Home() {
 
@@ -13,6 +14,7 @@ function Home() {
             <Hero />
             <Experience />
             <Skills />
+            <Offer />
         </div>
     );
 };
