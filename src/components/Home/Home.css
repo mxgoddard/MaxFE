@@ -1,35 +1,35 @@
 @import '../../fonts/style.css';
 
-/* .Hero {
-    width: 100vw;
-    height: 100vh;
-} */
+.Home {
+    overflow: hidden;
+    position: relative;
+}
 
 .Home video {
-    position: fixed;
+    position: absolute;
     width: 160vw;
     height: 160vh;
-    right: -56vw;
-    top: -40vh;
+    right: -54vw;
+    top: -60vh;
 }
 
 .Home-Container {
-    position: fixed;
-    bottom: 0;
-    padding-left: calc(2rem + 24px + 16px);
-    padding-bottom: 3rem;
+    position: sticky;
+    padding-left: calc(2rem + 24px + 16px); /* wtf is this */
+    padding-top: 54vh; 
 }
 
-#Home-Whoami {
+.Purple-Subtitle {
     font-family: 'PPPangramSans-Medium';
+    text-transform: uppercase;
     color: #6148F3;
     font-size: 16px;
 }
 
 #Home-Job-Title {
+    font-size: 80px;
     font-family: 'PPPangramSans-Semibold';
     color: #D5D0CA;
-    font-size: 80px;
 }
 
 #Home-About-Description {

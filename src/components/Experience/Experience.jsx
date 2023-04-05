@@ -1,70 +1,46 @@
 import React from 'react';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
 import './Experience.css';
-import { Paper } from '@mui/material';
-// import GeneralTestApiCall from '../../helpers/NetworkHelper.js;'
-
-/*
-    TODO - Display time at company
-    Company logo - images quite low res
-*/
 
 export default class Experience extends React.Component {
 
-    state = {
-        experience: [
-            { company: 'Bally Interactive', role: 'Full Stack Developer', startDate: 'November 2021' },
-            { company: 'Degree53', role: 'Full Stack Developer', startDate: 'July 2020' },
-            { company: 'AccessPay', role: 'Associate Software Developer', startDate: 'August 2019' },
-            { company: 'AccessPay', role: 'Junior Software Engineer', startDate: 'January 2019' },
-            { company: 'Northcoders', role: 'Trainee Stack Developer', startDate: 'September 2018' },
-            { company: 'Tanglin Trust School', role: 'Computer Science, Business, Maths', startDate: '' }
-        ]
-    }
-
     render() {
         return (
+            <div className='Experience-Wrapper'>
+                <div className='Experience-Half'>
+                    <Typography className='Purple-Subtitle'
+                        variant="h6"
+                        component="div"
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>// Measuring Success</Typography>
 
-            <Timeline position='alternate'>
-                <Typography variant='h6' component='span' textAlign={'center'}>Present</Typography>
-                {
-                    this.state.experience.map(function (data) {
-                        return (
-                            <TimelineItem>
-                                <TimelineOppositeContent
-                                    sx={{ m: 'auto 0' }}
-                                    align="right"
-                                    color="text.secondary"
-                                >
-                                    {data.startDate}
-                                </TimelineOppositeContent>
-                                <TimelineSeparator>
-                                    <TimelineConnector />
-                                    <TimelineDot sx={{ padding: '0' }}>
+                    <Typography id='Experience-Title'
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', lineHeight: '1', marginTop: '2rem' } }}>A Sea of Experience</Typography>
 
-                                    </TimelineDot>
-                                    <TimelineConnector />
-                                </TimelineSeparator>
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <Typography variant='h6' component="span">
-                                        {data.company}
-                                    </Typography>
-                                    <Typography>{data.role}</Typography>
-                                </TimelineContent>
-                            </TimelineItem>
-                        )
-                    })
-                }
+                    <Typography id='Home-About-Description'
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', marginTop: '2rem' } }}>
+                        As a software developer with 5 years of experience, I am passionate about using my skills to create innovative solutions that solve complex problems.
+                    </Typography>
+                </div>
+                <div className='Experience-Half'>
+                    <div className='Experience-Box'>
+                        <Typography id='Experience-Box-Figure' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>5+</Typography>
+                        <Typography id='Experience-Box-Figure-Desc' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>Years of experience</Typography>
+                    </div>
+                    <div className='Experience-Box'>
+                        <Typography id='Experience-Box-Figure' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>20+</Typography>
+                        <Typography id='Experience-Box-Figure-Desc' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>Projects worked on</Typography>
+                    </div>
+                    <div className='Experience-Box'>
+                        <Typography id='Experience-Box-Figure' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>-10</Typography>
+                        <Typography id='Experience-Box-Figure-Desc' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>Hand holding partners</Typography>
+                    </div>
+                    <div className='Experience-Box'>
+                        <Typography id='Experience-Box-Figure' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>2,000+</Typography>
+                        <Typography id='Experience-Box-Figure-Desc' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>Hours in DDLC</Typography>
+                    </div>
+                </div>
 
-                <Typography variant='h6' component='span' textAlign={'center'}>Not so present</Typography>
-            </Timeline>
+            </div>
         );
-    }
-}
+    };
+};

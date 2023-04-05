@@ -1,9 +1,45 @@
-.ExperienceCompanyLogoContainer {
-    width: 35px;
+.Experience-Wrapper {
+    margin-top: 10vh;
+    padding-top: 10vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: #141414;
+    color: white;
+    padding-left: calc(2rem + 24px + 16px); /* gonna need to do a css passover */
+    padding-right: calc(2rem + 24px + 16px);
+    border-top: 1px solid #D5D0CA;
 }
 
-.ExperienceCompanyLogoContainer .ExperienceCompanyLogo {
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 50%;
+.Experience-Half {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+#Experience-Title {
+    font-size: 60px;
+    font-family: 'PPPangramSans-Semibold';
+    color: #D5D0CA;
+}
+
+.Experience-Box {
+    display: inline-block;
+    border: 1px solid #74726F;
+    width: 46%;
+    margin: 2%;
+    padding: 1vw;
+}
+
+/* Remove duplicated styles */
+#Experience-Box-Figure {
+    font-size: 72px;
+    font-family: 'PPPangramSans-Semibold';
+    color: #D5D0CA;
+}
+
+#Experience-Box-Figure-Desc {
+    font-size: 24px;
+    font-family: 'PPPangramSans-Semibold';
+    color: #D5D0CA;
+    margin-top: 50%;
 }

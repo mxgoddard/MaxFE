@@ -34,14 +34,12 @@ const App = () => {
 		<div className="AppContainer">
 			<NavBar />
 
-			<div>
-				<Routes>
-					<Route exact path='/' element={<Home />} />
-					<Route path='/login' element={<Login />} />
-					<Route path='/profile' element={<Profile />} />
-					<Route path='/register' element={<Register />} />
-				</Routes>
-			</div>
+			<Routes>
+				<Route exact path='/' element={<Home />} />
+				<Route path='/login' element={<Login />} />
+				<Route path='/profile' element={<Profile />} />
+				<Route path='/register' element={<Register />} />
+			</Routes>
 			{/* <nav className="navbar navbar-expand navbar-dark bg-dark">
 				<Link to={"/"} className="navbar-brand">
 					Test123

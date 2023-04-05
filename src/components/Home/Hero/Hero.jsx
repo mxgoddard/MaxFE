@@ -10,19 +10,15 @@ export default class Hero extends React.Component {
                     Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
                 <div className='Home-Container'>
-                    <Typography variant="h6"
+                    <Typography className='Purple-Subtitle'
+                        variant="h6"
                         component="div"
-                        id='Home-Whoami'
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>// Who Am I</Typography>
 
-                    <Typography variant="h6"
-                        component="div"
-                        id='Home-Job-Title'
+                    <Typography id='Home-Job-Title' className='Page-Title'
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', maxWidth: '50vw', lineHeight: '1', marginTop: '2rem' } }}>Full-Stack Software Developer</Typography>
 
-                    <Typography variant="h6"
-                        component="div"
-                        id='Home-About-Description'
+                    <Typography id='Home-About-Description'
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', maxWidth: '50vw', marginTop: '2rem' } }}>
                         As a software developer with 5 years of experience, I am passionate about using my skills to create innovative solutions that solve complex problems.
                     </Typography>
