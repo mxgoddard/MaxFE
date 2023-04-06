@@ -7,6 +7,7 @@ import CheckButton from "react-validation/build/button";
 
 import { RegisterAction } from "../../actions/AuthActions";
 import './Register.css';
+import { Navigate, useNavigate } from "react-router-dom";
 
 const required = (value) => {
     if (!value) {
@@ -38,17 +39,19 @@ const validUserName = (value) => {
     }
 };
 
+// TODO - This should be more robust
 const validPassword = (value) => {
-    if (value.length < 6 || value.length > 40) {
+    if (value.length < 4 || value.length > 40) {
         return (
             <div className="alert alert-danger" role="alert">
-                Your password must be between 6 and 40 characters.
+                Your password must be between 4 and 40 characters.
             </div>
         );
     }
 };
 
 const Register = () => {
+    let navigate = useNavigate();
     const form = useRef();
     const checkBtn = useRef();
 
@@ -87,6 +90,8 @@ const Register = () => {
             dispatch(RegisterAction(username, password, firstName))
                 .then(() => {
                     setSuccessful(true);
+                    navigate("/profile");
+                    window.location.reload();
                 })
                 .catch(() => {
                     setSuccessful(false);
