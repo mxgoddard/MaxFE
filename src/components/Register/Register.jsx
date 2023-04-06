@@ -6,6 +6,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import { RegisterAction } from "../../actions/AuthActions";
+import './Register.css';
 
 const required = (value) => {
     if (!value) {
@@ -56,12 +57,7 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [successful, setSuccessful] = useState(false);
 
-    // const { message } = useSelector(state => state.message);
-    let message;
-    let messageSelector = useSelector(state => state.message);
-    if (messageSelector !== undefined) {
-        message = messageSelector.message;
-    }
+    const { message } = useSelector(state => state.MessageReducer);
 
     const dispatch = useDispatch();
 
@@ -99,69 +95,60 @@ const Register = () => {
     };
 
     return (
-        <div className="col-md-12">
-            <div className="card card-container">
-                <img
-                    src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                    alt="profile-img"
-                    className="profile-img-card"
-                />
-
-                <Form onSubmit={handleRegister} ref={form}>
-                    {!successful && (
+        <div className='Register-Wrapper'>
+            <h1>Register</h1>
+            <Form onSubmit={handleRegister} ref={form}>
+                {!successful && (
+                    <div>
                         <div>
-                            <div className="form-group">
-                                <label htmlFor="username">Username</label>
-                                <Input
-                                    type="text"
-                                    className="form-control"
-                                    name="username"
-                                    value={username}
-                                    onChange={onChangeUsername}
-                                    validations={[required, validUserName]}
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="firstName">First Name</label>
-                                <Input
-                                    type="text"
-                                    className="form-control"
-                                    name="firstName"
-                                    value={firstName}
-                                    onChange={onChangeFirstName}
-                                    validations={[required, validFirstName]}
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="password">Password</label>
-                                <Input
-                                    type="password"
-                                    className="form-control"
-                                    name="password"
-                                    value={password}
-                                    onChange={onChangePassword}
-                                    validations={[required, validPassword]}
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <button className="btn btn-primary btn-block">Sign Up</button>
-                            </div>
+                            <label htmlFor="username">Username</label>
+                            <Input
+                                type="text"
+                                name="username"
+                                value={username}
+                                onChange={onChangeUsername}
+                                validations={[required, validUserName]}
+                            />
                         </div>
-                    )}
 
-                    {message && (
-                        <div className="form-group">
-                            <div className={successful ? "alert alert-success" : "alert alert-danger"} role="alert">
-                                {message}
-                            </div>
+                        <div>
+                            <label htmlFor="firstName">First Name</label>
+                            <Input
+                                type="text"
+                                name="firstName"
+                                value={firstName}
+                                onChange={onChangeFirstName}
+                                validations={[required, validFirstName]}
+                            />
                         </div>
-                    )}
-                    <CheckButton style={{ display: "none" }} ref={checkBtn} />
-                </Form>
-            </div>
+
+                        <div>
+                            <label htmlFor="password">Password</label>
+                            <Input
+                                type="password"
+                                name="password"
+                                value={password}
+                                onChange={onChangePassword}
+                                validations={[required, validPassword]}
+                            />
+                        </div>
+
+                        <div>
+                            <button>Sign Up</button>
+                        </div>
+                    </div>
+                )}
+
+                {message && (
+                    <div className="form-group">
+                        <div className={successful ? "alert alert-success" : "alert alert-danger"} role="alert">
+                            {message}
+                        </div>
+                    </div>
+                )}
+                <CheckButton style={{ display: "none" }} ref={checkBtn} />
+            </Form>
+
         </div>
     );
 };

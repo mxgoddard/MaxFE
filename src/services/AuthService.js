@@ -8,11 +8,11 @@ const Register = (username, password, firstName) => {
         firstName
     })
     .then((response) => {
-        if (response.data.User.AuthToken) {
-            localStorage.setItem('user', JSON.stringify(response.data.User));
+        if (response.data.user.authToken) {
+            localStorage.setItem('user', JSON.stringify(response.data.user));
         }
 
-        return response.data.User;
+        return response.data.user;
     });
 }
 
@@ -22,11 +22,13 @@ const Login = (username, password) => {
         password
     })
     .then((response) => {
-        if (response.data.User.AuthToken) {
-            localStorage.setItem('user', JSON.stringify(response.data.User));
+        console.log('response');
+        console.log(response);
+        if (response.data.user.authToken) {
+            localStorage.setItem('user', JSON.stringify(response.data.user));
         }
 
-        return response.data.User;
+        return response.data.user;
     });
 }
 

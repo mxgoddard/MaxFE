@@ -16,19 +16,32 @@ import {
     AppBar
 } from '@mui/material';
 import { ReactComponent as Logo } from '../../media/MaxLogo.svg';
-import './NavBar.css';
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
+import './NavBar.css';
+import { LogoutAction } from '../../actions/AuthActions';
+import { useCallback } from 'react';
 
 const drawerWidth = 240;
 const navItems = ['About', 'Projects', 'Resume', 'Login →'];
 
 function NavBar(props) {
+
+    const { user: currentUser } = useSelector((state) => state.AuthReducer);
+    console.log('currentUser');
+	console.log(currentUser);
+    const dispatch = useDispatch();
+
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
+
+    const logOut = useCallback(() => {
+        dispatch(LogoutAction());
+    }, [dispatch]);
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -98,11 +111,39 @@ function NavBar(props) {
                                 {navItems[2]}
                             </Button>
                         </Link>
-                        <Link to={`/login`}>
+
+
+                        {/* <Link to={`/login`}>
                             <Button key={navItems[3]} id='Nav-Bar-Link-Login' sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
                                 {navItems[3]}
                             </Button>
-                        </Link>
+                        </Link> */}
+
+                        {currentUser ? (
+                            // <div className="navbar-nav ml-auto">
+                            //     <li className="nav-item">
+                            //         <Link to={"/profile"} className="nav-link">
+                            //             {currentUser.firstName}
+                            //         </Link>
+                            //     </li>
+                            //     <li className="nav-item">
+                            //         <a href="/login" className="nav-link" onClick={logOut}>
+                            //             LogOut
+                            //         </a>
+                            //     </li>
+                            // </div>
+                            <Link to={`/profile`}>
+                                <Button key={navItems[3]} id='Nav-Bar-Link-Login' onClick={logOut} sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
+                                    Logout {currentUser.firstName}
+                                </Button>
+                            </Link>
+                        ) : (
+                            <Link to={`/login`}>
+                                <Button key={navItems[3]} id='Nav-Bar-Link-Login' sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
+                                    {navItems[3]}
+                                </Button>
+                            </Link>
+                        )}
                     </Box>
                 </Toolbar>
             </AppBar>
@@ -128,3 +169,53 @@ function NavBar(props) {
 };
 
 export default NavBar;
+
+{/* <nav className="navbar navbar-expand navbar-dark bg-dark">
+				<Link to={"/"} className="navbar-brand">
+					Test123
+				</Link>
+				<div className="navbar-nav mr-auto">
+					<li className="nav-item">
+						<Link to={"/home"} className="nav-link">
+							Home
+						</Link>
+					</li>
+
+					{currentUser && (
+						<li className="nav-item">
+							<Link to={"/user"} className="nav-link">
+								User
+							</Link>
+						</li>
+					)}
+				</div>
+
+				{currentUser ? (
+					<div className="navbar-nav ml-auto">
+						<li className="nav-item">
+							<Link to={"/profile"} className="nav-link">
+								{currentUser.firstName}
+							</Link>
+						</li>
+						<li className="nav-item">
+							<a href="/login" className="nav-link" onClick={logOut}>
+								LogOut
+							</a>
+						</li>
+					</div>
+				) : (
+					<div className="navbar-nav ml-auto">
+						<li className="nav-item">
+							<Link to={"/login"} className="nav-link">
+								Login
+							</Link>
+						</li>
+
+						<li className="nav-item">
+							<Link to={"/register"} className="nav-link">
+								Register
+							</Link>
+						</li>
+					</div>
+				)}
+			</nav> */}

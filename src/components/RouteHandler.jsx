@@ -7,6 +7,7 @@ import About from './About/About';
 import Projects from './Projects/Projects';
 import Resume from './Resume/Resume';
 import Contact from './Contact/Contact';
+import Register from './Register/Register';
 
 export default class RouteHandler extends React.Component {
     render() {
@@ -22,7 +23,7 @@ export default class RouteHandler extends React.Component {
                     <Route exact path='/' element={<Home />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/profile' element={<Profile />} />
-                    <Route path='/register' element={<Home />} />
+                    <Route path='/register' element={<Register />} />
                     <Route path='/about' element={<About />} />
                     <Route path='/projects' element={<Projects />} />
                     <Route path='/resume' element={<Resume />} />

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -8,6 +8,7 @@ import CheckButton from "react-validation/build/button";
 
 import { LoginAction } from "../../actions/AuthActions";
 import './Login.css';
+import { Button } from "@mui/material";
 
 const required = (value) => {
     if (!value) {
@@ -25,6 +26,7 @@ const Login = (props) => {
     const form = useRef();
     const checkBtn = useRef();
 
+    // TODO - Change back to blank
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
@@ -82,48 +84,54 @@ const Login = (props) => {
 
     return (
         <div className='Login-Wrapper'>
-                <h1>Login</h1>
-                <Form onSubmit={handleLogin} ref={form}>
-                    <div>
-                        <label htmlFor="username">Username</label>
-                        <Input
-                            type="text"
-                            name="username"
-                            value={username}
-                            onChange={onChangeUsername}
-                            validations={[required]}
-                        />
-                    </div>
+            <h1>Login</h1>
+            <Form onSubmit={handleLogin} ref={form}>
+                <div>
+                    <label htmlFor="username">Username</label>
+                    <Input
+                        type="text"
+                        name="username"
+                        value={username}
+                        onChange={onChangeUsername}
+                        validations={[required]}
+                    />
+                </div>
 
-                    <div>
-                        <label>Password</label>
-                        <Input
-                            type="password"
-                            name="password"
-                            value={password}
-                            onChange={onChangePassword}
-                            validations={[required]}
-                        />
-                    </div>
+                <div>
+                    <label>Password</label>
+                    <Input
+                        type="password"
+                        name="password"
+                        value={password}
+                        onChange={onChangePassword}
+                        validations={[required]}
+                    />
+                </div>
 
-                    <div>
-                        <button disabled={loading}>
-                            {loading && (
-                                <span className="spinner-border spinner-border-sm"></span>
-                            )}
-                            <span>Login</span>
-                        </button>
-                    </div>
+                <div>
+                    <button disabled={loading}>
+                        {loading && (
+                            <span className="spinner-border spinner-border-sm"></span>
+                        )}
+                        <span>Login</span>
+                    </button>
+                </div>
 
-                    {message && (
-                        <div>
-                            <div className="alert alert-danger" role="alert">
-                                {message}
-                            </div>
+                {message && (
+                    <div>
+                        <div className="alert alert-danger" role="alert">
+                            {message}
                         </div>
-                    )}
-                    <CheckButton style={{ display: "none" }} ref={checkBtn} />
-                </Form>
+                    </div>
+                )}
+                <CheckButton style={{ display: "none" }} ref={checkBtn} />
+
+                <Link to={`/register`}>
+                    <Button key={'Register'} id='Nav-Bar-Link-Login' sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
+                        Register
+                    </Button>
+                </Link>
+            </Form>
         </div>
     );
 };
