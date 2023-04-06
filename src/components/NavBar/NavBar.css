@@ -29,3 +29,7 @@
     text-decoration: underline;
     text-underline-offset: 6px;
 }
+
+.Nav-Bar-Link-Wrapper a {
+    text-decoration: none;
+}

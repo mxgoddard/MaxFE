@@ -7,6 +7,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import { LoginAction } from "../../actions/AuthActions";
+import './Login.css';
 
 const required = (value) => {
     if (!value) {
@@ -80,20 +81,13 @@ const Login = (props) => {
     }
 
     return (
-        <div className="col-md-12">
-            <div className="card card-container">
-                <img
-                    src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                    alt="profile-img"
-                    className="profile-img-card"
-                />
-
+        <div className='Login-Wrapper'>
+                <h1>Login</h1>
                 <Form onSubmit={handleLogin} ref={form}>
-                    <div className="form-group">
+                    <div>
                         <label htmlFor="username">Username</label>
                         <Input
                             type="text"
-                            className="form-control"
                             name="username"
                             value={username}
                             onChange={onChangeUsername}
@@ -101,11 +95,10 @@ const Login = (props) => {
                         />
                     </div>
 
-                    <div className="form-group">
-                        <label htmlFor="password">Password</label>
+                    <div>
+                        <label>Password</label>
                         <Input
                             type="password"
-                            className="form-control"
                             name="password"
                             value={password}
                             onChange={onChangePassword}
@@ -113,8 +106,8 @@ const Login = (props) => {
                         />
                     </div>
 
-                    <div className="form-group">
-                        <button className="btn btn-primary btn-block" disabled={loading}>
+                    <div>
+                        <button disabled={loading}>
                             {loading && (
                                 <span className="spinner-border spinner-border-sm"></span>
                             )}
@@ -123,7 +116,7 @@ const Login = (props) => {
                     </div>
 
                     {message && (
-                        <div className="form-group">
+                        <div>
                             <div className="alert alert-danger" role="alert">
                                 {message}
                             </div>
@@ -131,7 +124,6 @@ const Login = (props) => {
                     )}
                     <CheckButton style={{ display: "none" }} ref={checkBtn} />
                 </Form>
-            </div>
         </div>
     );
 };

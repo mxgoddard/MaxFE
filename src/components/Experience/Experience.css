@@ -16,7 +16,8 @@
 }
 
 #Experience-Title {
-    font-size: 60px;
+    /* font-size: 60px; */
+    font-size: 3.25vw;
     font-family: 'PPPangramSans-Semibold';
     color: #D5D0CA;
 }
@@ -31,13 +32,15 @@
 
 /* Remove duplicated styles */
 #Experience-Box-Figure {
-    font-size: 72px;
+    /* font-size: 72px; */
+    font-size: 4vw;
     font-family: 'PPPangramSans-Semibold';
     color: #D5D0CA;
 }
 
 #Experience-Box-Figure-Desc {
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 1.3vw;
     font-family: 'PPPangramSans-Semibold';
     color: #D5D0CA;
     margin-top: 50%;

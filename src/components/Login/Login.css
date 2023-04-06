@@ -1,11 +1,11 @@
 @import '../../fonts/style.css';
 
-.LoginWrapper {
-    /* background: linear-gradient(-135deg, #c850c0, #4158d0);
-    background-attachment: fixed;
-    height: calc(100vh - 200px); */
-    padding: 100px 25vw;
-    margin-top: 50px;
+.Login-Wrapper {
+    font-family: 'PPPangramSans-Semibold';
+    color: #D5D0CA;
+    padding-top: 12vh;
+    padding-left: calc(2rem + 24px + 16px); /* wtf is this */
+    height: 100vh;
 }
 
 /* .LoginContainer {

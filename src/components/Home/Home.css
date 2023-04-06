@@ -8,6 +8,8 @@
 .Home video {
     position: absolute;
     width: 160vw;
+    /* max-width: 2500px; */
+    /* max-height: 160vh; */
     height: 160vh;
     right: -54vw;
     top: -60vh;
@@ -40,4 +42,8 @@
 
 #Home-Link-Get-In-Touch {
     padding-top: 100px;
+}
+
+.Home-Container a {
+    text-decoration: none;
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import { 
+import {
     Typography,
-    Toolbar, 
-    Button, 
-    ListItemText, 
-    ListItemButton, 
+    Toolbar,
+    Button,
+    ListItemText,
+    ListItemButton,
     ListItem,
     List,
     IconButton,
@@ -13,10 +13,11 @@ import {
     Divider,
     CssBaseline,
     Box,
-    AppBar }
-     from '@mui/material';
+    AppBar
+} from '@mui/material';
 import { ReactComponent as Logo } from '../../media/MaxLogo.svg';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['About', 'Projects', 'Resume', 'Login →'];
@@ -63,33 +64,45 @@ function NavBar(props) {
                     >
                         <MenuIcon />
                     </IconButton>
+
                     <Typography
                         variant="h6"
                         component="div"
                         id='Nav-Bar-Logo-Name'
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        <Logo />
+                        <Link to={'/'}>
+                            <Logo />
+                        </Link>
                     </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'block', backgroundColor: '#141414', borderRadius: '100px'} }}>
+                    {/* </Link> */}
+                    <Box className='Nav-Bar-Link-Wrapper' sx={{ display: { xs: 'none', sm: 'block', backgroundColor: '#141414', borderRadius: '100px' } }}>
                         {/* {navItems.map((item) => (
                             <Button key={item} className='Nav-Bar-Link' sx={{ backgroundColor: '#141414', borderRadius: '50%', padding: '1rem' }}>
                                 {item}
                             </Button>
                         ))} */}
-                        {/* TODO - I don't know why this works with ids and not classes */}
-                        <Button key={navItems[0]} id='Nav-Bar-Link' sx={{ backgroundColor: '#141414', borderRadius: '100px 0 0 100px', padding: '1rem 2rem' }}>
-                            {navItems[0]}
-                        </Button>
-                        <Button key={navItems[1]} id='Nav-Bar-Link' sx={{ backgroundColor: '#141414', padding: '1rem 2rem' }}>
-                            {navItems[1]}
-                        </Button>
-                        <Button key={navItems[2]} id='Nav-Bar-Link' sx={{ backgroundColor: '#141414', padding: '1rem 2rem' }}>
-                            {navItems[2]}
-                        </Button>
-                        <Button key={navItems[3]} id='Nav-Bar-Link-Login' sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
-                            {navItems[3]}
-                        </Button>
+                        {/* TODO - I don't know why this works with ids and not classes - Move to loop */}
+                        <Link to={`/${navItems[0]}`}>
+                            <Button key={navItems[0]} id='Nav-Bar-Link' sx={{ backgroundColor: '#141414', borderRadius: '100px 0 0 100px', padding: '1rem 2rem' }}>
+                                {navItems[0]}
+                            </Button>
+                        </Link>
+                        <Link to={`/${navItems[1]}`}>
+                            <Button key={navItems[1]} id='Nav-Bar-Link' sx={{ backgroundColor: '#141414', padding: '1rem 2rem' }}>
+                                {navItems[1]}
+                            </Button>
+                        </Link>
+                        <Link to={`/${navItems[2]}`}>
+                            <Button key={navItems[2]} id='Nav-Bar-Link' sx={{ backgroundColor: '#141414', padding: '1rem 2rem' }}>
+                                {navItems[2]}
+                            </Button>
+                        </Link>
+                        <Link to={`/login`}>
+                            <Button key={navItems[3]} id='Nav-Bar-Link-Login' sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
+                                {navItems[3]}
+                            </Button>
+                        </Link>
                     </Box>
                 </Toolbar>
             </AppBar>
