@@ -29,7 +29,7 @@ function NavBar(props) {
 
     const { user: currentUser } = useSelector((state) => state.AuthReducer);
     console.log('currentUser');
-	console.log(currentUser);
+    console.log(currentUser);
     const dispatch = useDispatch();
 
     const { window } = props;
@@ -88,14 +88,7 @@ function NavBar(props) {
                             <Logo />
                         </Link>
                     </Typography>
-                    {/* </Link> */}
                     <Box className='Nav-Bar-Link-Wrapper' sx={{ display: { xs: 'none', sm: 'block', backgroundColor: '#141414', borderRadius: '100px' } }}>
-                        {/* {navItems.map((item) => (
-                            <Button key={item} className='Nav-Bar-Link' sx={{ backgroundColor: '#141414', borderRadius: '50%', padding: '1rem' }}>
-                                {item}
-                            </Button>
-                        ))} */}
-                        {/* TODO - I don't know why this works with ids and not classes - Move to loop */}
                         <Link to={`/${navItems[0]}`}>
                             <Button key={navItems[0]} id='Nav-Bar-Link' sx={{ backgroundColor: '#141414', borderRadius: '100px 0 0 100px', padding: '1rem 2rem' }}>
                                 {navItems[0]}
@@ -113,25 +106,7 @@ function NavBar(props) {
                         </Link>
 
 
-                        {/* <Link to={`/login`}>
-                            <Button key={navItems[3]} id='Nav-Bar-Link-Login' sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
-                                {navItems[3]}
-                            </Button>
-                        </Link> */}
-
                         {currentUser ? (
-                            // <div className="navbar-nav ml-auto">
-                            //     <li className="nav-item">
-                            //         <Link to={"/profile"} className="nav-link">
-                            //             {currentUser.firstName}
-                            //         </Link>
-                            //     </li>
-                            //     <li className="nav-item">
-                            //         <a href="/login" className="nav-link" onClick={logOut}>
-                            //             LogOut
-                            //         </a>
-                            //     </li>
-                            // </div>
                             <Link to={`/profile`}>
                                 <Button key={navItems[3]} id='Nav-Bar-Link-Login' onClick={logOut} sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
                                     Logout {currentUser.firstName}
@@ -169,53 +144,3 @@ function NavBar(props) {
 };
 
 export default NavBar;
-
-{/* <nav className="navbar navbar-expand navbar-dark bg-dark">
-				<Link to={"/"} className="navbar-brand">
-					Test123
-				</Link>
-				<div className="navbar-nav mr-auto">
-					<li className="nav-item">
-						<Link to={"/home"} className="nav-link">
-							Home
-						</Link>
-					</li>
-
-					{currentUser && (
-						<li className="nav-item">
-							<Link to={"/user"} className="nav-link">
-								User
-							</Link>
-						</li>
-					)}
-				</div>
-
-				{currentUser ? (
-					<div className="navbar-nav ml-auto">
-						<li className="nav-item">
-							<Link to={"/profile"} className="nav-link">
-								{currentUser.firstName}
-							</Link>
-						</li>
-						<li className="nav-item">
-							<a href="/login" className="nav-link" onClick={logOut}>
-								LogOut
-							</a>
-						</li>
-					</div>
-				) : (
-					<div className="navbar-nav ml-auto">
-						<li className="nav-item">
-							<Link to={"/login"} className="nav-link">
-								Login
-							</Link>
-						</li>
-
-						<li className="nav-item">
-							<Link to={"/register"} className="nav-link">
-								Register
-							</Link>
-						</li>
-					</div>
-				)}
-			</nav> */}

@@ -3,10 +3,10 @@
     padding-top: 10vh;
     height: 100vh;
     width: 100vw;
-    background-color: #141414;
+    background-color: var(--brand-grey);
     padding-left: calc(2rem + 24px + 16px); /* gonna need to do a css passover */
     padding-right: calc(2rem + 24px + 16px);
-    border-top: 1px solid #D5D0CA;
+    border-top: 1px solid var(--brand-white);
 }
 
 .Experience-Half {
@@ -19,7 +19,7 @@
     /* font-size: 60px; */
     font-size: 3.25vw;
     font-family: 'PPPangramSans-Semibold';
-    color: #D5D0CA;
+    color: var(--brand-white);
 }
 
 .Experience-Box {
@@ -35,13 +35,13 @@
     /* font-size: 72px; */
     font-size: 4vw;
     font-family: 'PPPangramSans-Semibold';
-    color: #D5D0CA;
+    color: var(--brand-white);
 }
 
 #Experience-Box-Figure-Desc {
     /* font-size: 24px; */
     font-size: 1.3vw;
     font-family: 'PPPangramSans-Semibold';
-    color: #D5D0CA;
+    color: var(--brand-white);
     margin-top: 50%;
 }

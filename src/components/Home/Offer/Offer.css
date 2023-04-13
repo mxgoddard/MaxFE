@@ -2,10 +2,10 @@
     padding-top: 10vh;
     height: 100vh;
     width: 100vw;
-    background-color: #141414;
+    background-color: var(--brand-grey);
     padding-left: calc(2rem + 24px + 16px); /* gonna need to do a css passover */
     padding-right: calc(2rem + 24px + 16px);
-    border-top: 1px solid #D5D0CA;
+    border-top: 1px solid var(--brand-white);
 }
 
 .Offer-Box-Wrapper {
@@ -32,13 +32,13 @@
 #Offer-Box-Figure {
     font-size: 30px;
     font-family: 'PPPangramSans-Semibold';
-    color: #D5D0CA;
+    color: var(--brand-white);
     margin-top: 40%;
 }
 
 #Offer-Box-Figure-Desc {
     font-size: 16px;
     font-family: 'PPPangramSans-Regular';
-    color: #D5D0CA;
+    color: var(--brand-white);
     
 }

@@ -24,6 +24,7 @@ export default class Hero extends React.Component {
                         As a software developer with 5 years of experience, I am passionate about using my skills to create innovative solutions that solve complex problems.
                     </Typography>
 
+                    {/* Move background colour to get from css variable */}
                     <Link to={'/Contact'}>
                         <Button key={'Hero-Get-In-Touch'} id='Nav-Bar-Link-Login' sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem', marginTop: '2rem' }}>
                             {'Get in touch →'}

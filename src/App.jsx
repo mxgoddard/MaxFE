@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 
 import "./App.css";
 
-// import { LogoutAction } from "./actions/AuthActions";
 import { ClearMessageAction } from "./actions/MessageActions";
 import NavBar from "./components/NavBar/NavBar";
 import RouteHandler from "./components/RouteHandler";
@@ -30,10 +29,6 @@ const App = () => {
 			<NavBar />
 
 			<RouteHandler />
-
-			{/* <RouteHandler /> */}
-
-
 		</div>
 	);
 };

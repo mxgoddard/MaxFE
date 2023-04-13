@@ -24,19 +24,19 @@
 .Purple-Subtitle {
     font-family: 'PPPangramSans-Medium';
     text-transform: uppercase;
-    color: #6148F3;
+    color: var(--brand-purple);
     font-size: 16px;
 }
 
 #Home-Job-Title {
     font-size: 80px;
     font-family: 'PPPangramSans-Semibold';
-    color: #D5D0CA;
+    color: var(--brand-white);
 }
 
 #Home-About-Description {
     font-family: 'PPPangramSans-Regular';
-    color: #D5D0CA;
+    color: var(--brand-white);
     font-size: 16px;
 }
 

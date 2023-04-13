@@ -2,22 +2,22 @@
 
 #Nav-Bar-Logo-Name {
     font-family: 'PPPangramSans-Bold';
-    color: #D5D0CA;
+    color: var(--brand-white);
     font-size: 30px;
 }
 
 #Nav-Bar-Link {
     font-family: 'PPPangramSans-Bold';
-    color: #D5D0CA;
+    color: var(--brand-white);
     font-size: 12px;
-    background-color: #141414;
+    background-color: var(--brand-grey);
 }
 
 #Nav-Bar-Link-Login {
     font-family: 'PPPangramSans-Bold';
-    color: #141414;
+    color: var(--brand-grey);
     font-size: 12px;
-    background-color: #D5D0CA;
+    background-color: var(--brand-white);
 }
 
 #Nav-Bar-Link:hover {

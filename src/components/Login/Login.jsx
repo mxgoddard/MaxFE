@@ -7,7 +7,6 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import { LoginAction } from "../../actions/AuthActions";
-import './Login.css';
 import { Button } from "@mui/material";
 
 const required = (value) => {
@@ -71,7 +70,7 @@ const Login = (props) => {
     }
 
     return (
-        <div className='Login-Wrapper'>
+        <div className='Section-Wrapper'>
             <h1>Login</h1>
             <Form onSubmit={handleLogin} ref={form}>
                 <div>

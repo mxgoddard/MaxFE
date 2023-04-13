@@ -5,8 +5,8 @@
 .Skills-Wrapper {
     padding: 10vh 0;
     width: 100vw;
-    background-color: #141414;
-    border-top: 1px solid #D5D0CA;
+    background-color: var(--brand-grey);
+    border-top: 1px solid var(--brand-white);
     text-align: center;
 }
 

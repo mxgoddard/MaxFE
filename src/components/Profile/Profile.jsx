@@ -1,19 +1,16 @@
 import React from "react";
 import { Navigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
-import './Profile.css';
 
 const Profile = () => {
 	const { user: currentUser } = useSelector((state) => state.AuthReducer);
-	// console.log('currentUser');
-	// console.log(currentUser);
 
 	if (!currentUser) {
 		return <Navigate to="/login" />;
 	}
 
 	return (
-		<div className="Profile-Wrapper">
+		<div className="Section-Wrapper">
 			<header>
 				<h1>{currentUser.firstName} Profile</h1>
 			</header>

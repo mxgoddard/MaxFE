@@ -6,7 +6,6 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import { RegisterAction } from "../../actions/AuthActions";
-import './Register.css';
 import { Navigate, useNavigate } from "react-router-dom";
 
 const required = (value) => {
@@ -100,7 +99,7 @@ const Register = () => {
     };
 
     return (
-        <div className='Register-Wrapper'>
+        <div className='Section-Wrapper'>
             <h1>Register</h1>
             <Form onSubmit={handleRegister} ref={form}>
                 {!successful && (

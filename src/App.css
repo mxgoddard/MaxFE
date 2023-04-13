@@ -1,3 +1,9 @@
+:root {
+	--brand-white: #D5D0CA;
+	--brand-grey: #141414;
+	--brand-purple: #6148F3;
+}
+
 html {
 	margin: 0;
 }
@@ -8,4 +14,12 @@ body {
 
 .AppContainer {
 	background-color: #0A0A0A;
+}
+
+.Section-Wrapper {
+    font-family: 'PPPangramSans-Semibold';
+    color: var(--brand-white);
+    padding-top: 12vh;
+    padding-left: calc(2rem + 24px + 16px); /* wtf is this */
+    height: 100vh;
 }
