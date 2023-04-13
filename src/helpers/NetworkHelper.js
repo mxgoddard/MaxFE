@@ -1,45 +1,9 @@
-// Add error handling and inject constant base url
+// TODO - Add error handling and inject constant base url
 const LOCAL_BASE_URL = 'https://localhost:5001/api';
 const HOSTED_BASE_URL = 'https://maxapp.azurewebsites.net/api';
 
-// Temporary basic switch
-const HOSTED = false;
-
-const postRequestOptions = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: ''
-};
-
-export const GeneralTestApiCall = () => 
+export const DetermineUrl = (relativePath) => 
 {
-    fetch(DetermineUrl('general/test'), {
-        method: "GET"
-    })
-    .then(res => res.json())
-    .then((result) => {
-        return result;
-    })
-    .catch((ex) => console.log(ex));
-}
-
-export const LoginA = (username, password) => 
-{
-    postRequestOptions.body = JSON.stringify({
-        'Username': `${username}`,
-        'Password': `${password}`
-    });
-
-    return fetch(DetermineUrl('user/login'), postRequestOptions)
-        .then(res => res.json())
-        .then((data) => {
-            return data;
-        })
-        .catch((ex) => console.log(ex));
-}
-
-
-export const DetermineUrl = (relativePath) => {
-    let baseUrl = HOSTED ? HOSTED_BASE_URL : LOCAL_BASE_URL;
+    let baseUrl = window.location.hostname === 'localhost' ? LOCAL_BASE_URL : HOSTED_BASE_URL;
     return `${baseUrl}/${relativePath}`;
 }

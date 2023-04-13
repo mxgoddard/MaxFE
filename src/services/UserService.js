@@ -24,18 +24,3 @@ export default {
     EditUser,
     GetModeratorBoard
 }
-
-
-/*
-    return axios.post(DetermineUrl('user/login'), {
-        username,
-        password
-    })
-    .then((response) => {
-        if (response.data.User.AuthToken) {
-            localStorage.setItem('user', JSON.stringify(response.data.User));
-        }
-
-        return response.data.User;
-    });
-*/
