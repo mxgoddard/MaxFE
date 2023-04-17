@@ -8,8 +8,6 @@
 .Home video {
     position: absolute;
     width: 160vw;
-    /* max-width: 2500px; */
-    /* max-height: 160vh; */
     height: 160vh;
     right: -54vw;
     top: -60vh;
@@ -17,7 +15,7 @@
 
 .Home-Container {
     position: sticky;
-    padding-left: calc(2rem + 24px + 16px); /* wtf is this */
+    padding-left: var(--brand-border); /* wtf is this */
     padding-top: 54vh; 
 }
 

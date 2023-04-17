@@ -2,6 +2,7 @@
 	--brand-white: #D5D0CA;
 	--brand-grey: #141414;
 	--brand-purple: #6148F3;
+	--brand-border: calc(2rem + 24px + 16px);
 }
 
 html {
@@ -13,13 +14,13 @@ body {
 }
 
 .AppContainer {
-	background-color: #0A0A0A;
+	background-color: #0A0A0A;	/* Hero video background colour */
 }
 
 .Section-Wrapper {
     font-family: 'PPPangramSans-Semibold';
     color: var(--brand-white);
     padding-top: 12vh;
-    padding-left: calc(2rem + 24px + 16px); /* wtf is this */
+    padding-left: var(--brand-border); /* wtf is this */
     height: 100vh;
 }

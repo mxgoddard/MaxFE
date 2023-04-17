@@ -105,7 +105,6 @@ function NavBar(props) {
                             </Button>
                         </Link>
 
-
                         {currentUser ? (
                             <Link to={`/profile`}>
                                 <Button key={navItems[3]} id='Nav-Bar-Link-Login' onClick={logOut} sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>

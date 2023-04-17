@@ -4,8 +4,8 @@
     height: 100vh;
     width: 100vw;
     background-color: var(--brand-grey);
-    padding-left: calc(2rem + 24px + 16px); /* gonna need to do a css passover */
-    padding-right: calc(2rem + 24px + 16px);
+    padding-left: var(--brand-border); /* gonna need to do a css passover */
+    padding-right: var(--brand-border);
     border-top: 1px solid var(--brand-white);
 }
 
@@ -16,7 +16,6 @@
 }
 
 #Experience-Title {
-    /* font-size: 60px; */
     font-size: 3.25vw;
     font-family: 'PPPangramSans-Semibold';
     color: var(--brand-white);
@@ -32,14 +31,12 @@
 
 /* Remove duplicated styles */
 #Experience-Box-Figure {
-    /* font-size: 72px; */
     font-size: 4vw;
     font-family: 'PPPangramSans-Semibold';
     color: var(--brand-white);
 }
 
 #Experience-Box-Figure-Desc {
-    /* font-size: 24px; */
     font-size: 1.3vw;
     font-family: 'PPPangramSans-Semibold';
     color: var(--brand-white);
