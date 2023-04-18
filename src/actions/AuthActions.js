@@ -40,8 +40,6 @@ export const RegisterAction = (username, password, firstName) => (dispatch) => {
 export const LoginAction = (username, password) => (dispatch) => {
     return AuthService.Login(username, password).then(
         (data) => {
-            console.log('data');
-            console.log(data);
             dispatch({
                 type: LOGIN_SUCCESS,
                 payload: { user: data }

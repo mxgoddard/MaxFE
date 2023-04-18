@@ -6,7 +6,6 @@ export const GetIdFromUrl = (path) => {
         return id;
     }
     
-    console.log('Last element of path is not an integer.');
     return null;
 }
 

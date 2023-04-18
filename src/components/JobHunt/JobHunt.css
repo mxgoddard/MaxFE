@@ -1,0 +1,59 @@
+.Column-Container {
+    display: flex;
+    width: 100%;
+    padding-right: var(--brand-border); /* wtf is this */
+}
+
+.Stage-Column {
+    flex: 1;
+    height: 80vh;
+    text-align: center;
+}
+
+.Column-Container .Stage-Column:first-of-type {
+    border-left: 1px solid var(--brand-white);
+    border-right: 1px solid var(--brand-white);
+}
+
+.Column-Container .Stage-Column:nth-child(2) {
+    border-right: 1px solid var(--brand-white);
+}
+
+.Column-Container .Stage-Column:last-of-type {
+    border-left: 1px solid var(--brand-white);
+    border-right: 1px solid var(--brand-white);
+}
+
+.Draggable {
+    border-radius: 2%;
+    border: 1px solid var(--brand-white);
+    background-color: var(--brand-grey);
+    width: 80%;
+    margin: 1rem 10%;
+    padding-bottom: 1rem;
+    line-height: 0;
+}
+
+#Job-Hunt-Company-Name {
+    font-family: 'PPPangramSans-Semibold';
+    font-size: 18px;
+}
+
+#Job-Hunt-Link-Login {
+    font-family: 'PPPangramSans-Semibold';
+    color: var(--brand-grey);
+    font-size: 12px;
+    background-color: var(--brand-white);
+    margin-top: 1rem;
+}
+
+#Job-Hunt-Link-Login:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+#Home-About-Description {
+    font-family: 'PPPangramSans-Regular';
+    color: var(--brand-white);
+    font-size: 16px;
+}

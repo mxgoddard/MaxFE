@@ -22,8 +22,6 @@ const Login = (username, password) => {
         password
     })
     .then((response) => {
-        console.log('response');
-        console.log(response);
         if (response.data.user.authToken) {
             localStorage.setItem('user', JSON.stringify(response.data.user));
         }

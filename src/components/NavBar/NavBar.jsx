@@ -23,13 +23,11 @@ import { LogoutAction } from '../../actions/AuthActions';
 import { useCallback } from 'react';
 
 const drawerWidth = 240;
-const navItems = ['About', 'Projects', 'Resume', 'Login →'];
+const navItems = ['About', 'Projects', 'Resume', 'Job-Hunt', 'Login →'];
 
 function NavBar(props) {
 
     const { user: currentUser } = useSelector((state) => state.AuthReducer);
-    console.log('currentUser');
-    console.log(currentUser);
     const dispatch = useDispatch();
 
     const { window } = props;
@@ -104,17 +102,22 @@ function NavBar(props) {
                                 {navItems[2]}
                             </Button>
                         </Link>
+                        <Link to={`/${navItems[3]}`}>
+                            <Button key={navItems[3]} id='Nav-Bar-Link' sx={{ backgroundColor: '#141414', padding: '1rem 2rem' }}>
+                                job Hunt
+                            </Button>
+                        </Link>
 
                         {currentUser ? (
                             <Link to={`/profile`}>
-                                <Button key={navItems[3]} id='Nav-Bar-Link-Login' onClick={logOut} sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
+                                <Button key={navItems[4]} id='Nav-Bar-Link-Login' onClick={logOut} sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
                                     Logout {currentUser.firstName}
                                 </Button>
                             </Link>
                         ) : (
                             <Link to={`/login`}>
-                                <Button key={navItems[3]} id='Nav-Bar-Link-Login' sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
-                                    {navItems[3]}
+                                <Button key={navItems[4]} id='Nav-Bar-Link-Login' sx={{ backgroundColor: '#141414', borderRadius: '100px', padding: '1rem 2rem' }}>
+                                    {navItems[4]}
                                 </Button>
                             </Link>
                         )}

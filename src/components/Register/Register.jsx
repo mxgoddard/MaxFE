@@ -6,7 +6,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import { RegisterAction } from "../../actions/AuthActions";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const required = (value) => {
     if (!value) {

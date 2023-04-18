@@ -27,19 +27,18 @@ export default class Experience extends React.Component {
                         <Typography id='Experience-Box-Figure-Desc'>Years of experience</Typography>
                     </div>
                     <div className='Experience-Box'>
-                        <Typography id='Experience-Box-Figure'>20+</Typography>
+                        <Typography id='Experience-Box-Figure'>10+</Typography>
                         <Typography id='Experience-Box-Figure-Desc'>Projects worked on</Typography>
                     </div>
                     <div className='Experience-Box'>
                         <Typography id='Experience-Box-Figure'>-10</Typography>
-                        <Typography id='Experience-Box-Figure-Desc'>Hand holding partners</Typography>
+                        <Typography id='Experience-Box-Figure-Desc'>Design level</Typography>
                     </div>
                     <div className='Experience-Box'>
-                        <Typography id='Experience-Box-Figure'>2,000+</Typography>
-                        <Typography id='Experience-Box-Figure-Desc'>Hours in DDLC</Typography>
+                        <Typography id='Experience-Box-Figure'>1+</Typography>
+                        <Typography id='Experience-Box-Figure-Desc'>Lines of code</Typography>
                     </div>
                 </div>
-
             </div>
         );
     };
