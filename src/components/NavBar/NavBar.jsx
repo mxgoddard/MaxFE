@@ -23,7 +23,7 @@ import { LogoutAction } from '../../actions/AuthActions';
 import { useCallback } from 'react';
 
 const drawerWidth = 240;
-const navItems = ['About', 'Projects', 'Resume', 'Job-Hunt', 'Login →'];
+const navItems = ['About', 'Projects', 'Resume', 'Countdown', 'Login →'];
 
 function NavBar(props) {
 
@@ -102,9 +102,14 @@ function NavBar(props) {
                                 {navItems[2]}
                             </Button>
                         </Link>
-                        <Link to={`/${navItems[3]}`}>
+                        {/* <Link to={`/${navItems[3]}`}>
                             <Button key={navItems[3]} id='Nav-Bar-Link' sx={{ backgroundColor: '#141414', padding: '1rem 2rem' }}>
                                 job Hunt
+                            </Button>
+                        </Link> */}
+                        <Link to={`/${navItems[3]}`}>
+                            <Button key={navItems[3]} id='Nav-Bar-Link' sx={{ backgroundColor: '#141414', padding: '1rem 2rem' }}>
+                                Countdown
                             </Button>
                         </Link>
 

@@ -7,6 +7,7 @@ import About from './About/About';
 import Projects from './Projects/Projects';
 import Resume from './Resume/Resume';
 import Contact from './Contact/Contact';
+import Countdown from './Countdown/Countdown';
 import Register from './Register/Register';
 import JobHunt from './JobHunt/JobHunt';
 import JobHuntCreateForm from './JobHunt/JobHuntCreateForm';
@@ -24,6 +25,7 @@ export default class RouteHandler extends React.Component {
                     <Route path='/projects' element={<Projects />} />
                     <Route path='/resume' element={<Resume />} />
                     <Route path='/contact' element={<Contact />} />
+                    <Route path='/countdown' element={<Countdown />} />
                     <Route path='/job-hunt' element={<JobHunt />} />
                     <Route path='/create-job' element={<JobHuntCreateForm />} />
                 </Routes>
